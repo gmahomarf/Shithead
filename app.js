@@ -12,7 +12,7 @@ app.get('/',function(request, response) {
 	response.contentType("html");
 	if (acc.length == 10)
  	{
-	acc.pop();
+		acc.pop();
 	}
  	acc.unshift((new Date()).toString());
  	response.render('main',{'acc':acc});
