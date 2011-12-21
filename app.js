@@ -18,7 +18,7 @@ app.get('/',function(request, response) {
 		acc.pop();
 	}
  	acc.unshift((new Date()).toString());
- 	response.render('main',{'acc':acc, 'nname': (request.cookies.nname  ? true:false), 'uname' : request.cookies.nname});
+ 	response.render('main',{'acc':acc, 'nname': (request.cookies.nname ? true:false), 'uname' : request.cookies.nname});
 });
 
 app.post('/msg',hMessage);
