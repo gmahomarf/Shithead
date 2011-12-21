@@ -18,6 +18,24 @@ $(document)
 			        return false;
 			    }
 			    );
+			$('#setname')
+			.click(
+			    function(e)
+			    {
+			        $.post(
+			            '/name',
+			            'nname='+$('#nname').val(),
+			            function()
+			            {
+			                $('#nname').attr('readonly','readonly');
+			                $('#msg').attr('disabled',false);
+			                $('#send').attr('disabled',false);
+			            },
+			            'json'
+			            )
+			        return false;
+			    }
+			    );
 			var socket = io.connect();
 			socket.on('chatMsg',
 			    function(data)
@@ -26,7 +44,7 @@ $(document)
 			        .append(
 			            $('<p></p>')
 			            .append(
-			            		$('<span></span>').addClass('name').html(data.name)
+			            		$('<span></span>').addClass('name').html(data.name + ":")
 	                )
 	                .append(
 	                    $('<span></span>').addClass('text').html(data.text)

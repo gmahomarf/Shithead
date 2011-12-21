@@ -21,7 +21,12 @@ html
         span Chat:
         #chat
         form#frmChat(name='chat')
+          //- if(!nname)
+          label(for='nname') Choose your user name:
+          input#nname(type='text',name='nname',value=(nname ? uname :''), readonly=(nname ? 'readonly': false))
+          input#setname(type='button',name='setname',value='Set')
+          br
           label(for='msg') Message:
-          input#msg(type='text',name='msg')
-          input(type='submit',value='Send')
+          input#msg(type='text',name='msg',disabled=!nname)
+          input#send(type='submit',value='Send',disabled=!nname)
     footer
