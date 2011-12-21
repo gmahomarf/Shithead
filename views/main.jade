@@ -1,11 +1,27 @@
 !!! 5
 html
-   head
-      title Test
-   body
-      div.cl#div1 Hello, World!
-      h4 &Uacute;ltimas 10 visitas:
-      ol
-         each d in acc
-            li #{d}
-      div Bye, World!
+  head
+    title Test
+    link(rel='stylesheet',href='styles.css',type='text/css')
+    script(type='text/javascript',src='/jquery.js')
+    script(type='text/javascript',src='/socket.io/socket.io.js')
+    script(type='text/javascript',src='/scr.js')
+  body
+    header
+    section
+      //
+        div.cl#div1 Hello, World!
+        h4 &Uacute;ltimas 10 visitas:
+        ol
+          each d in acc
+            li= d
+        div Bye, World! */
+      #container
+        br
+        span Chat:
+        #chat
+        form#frmChat(name='chat')
+          label(for='msg') Message:
+          input#msg(type='text',name='msg')
+          input(type='submit',value='Send')
+    footer

@@ -1,0 +1,30 @@
+@CHARSET "ISO-8859-1";
+
+#chat
+{
+	border: 1px #000 solid;
+	border-radius: 5px;
+	width: 400px;
+	height: 500px;
+	overflow: auto;
+}
+
+#chat p
+{
+	display: block;
+	clear: both;
+	overflow: hidden;
+	font-size: 14px;
+	margin: 5px auto;
+}
+
+#chat p span.name
+{
+	color: #006;
+	font-weight: bold;
+}
+
+#chat p span.text
+{
+  color: #000;
+}
