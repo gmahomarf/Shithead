@@ -2,6 +2,13 @@
 
 #chat
 {
+	height: auto;
+	overflow: hidden;
+	
+}
+
+#chatWrapper
+{
 	border: 1px #000 solid;
 	border-radius: 5px;
 	width: 400px;

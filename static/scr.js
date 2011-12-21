@@ -50,6 +50,10 @@ $(document)
 	                    $('<span></span>').addClass('text').html(data.text)
                   )
               );
+			        var chatHeight = $('#chat').height();
+			        var chatWHeight = $('#chatWrapper').height();
+			        if (chatHeight > chatWHeight)
+			        	$('#chatWrapper').scrollTop(chatHeight - chatWHeight);
 			    }
 		    );
 		}
