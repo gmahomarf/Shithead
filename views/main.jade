@@ -9,15 +9,7 @@ html
   body
     header
     section
-      //
-        div.cl#div1 Hello, World!
-        h4 &Uacute;ltimas 10 visitas:
-        ol
-          each d in acc
-            li= d
-        div Bye, World! */
       #container
-        br
         span Chat:
         #chatWrapper
           #chat
@@ -30,4 +22,10 @@ html
           label(for='msg') Message:
           input#msg(type='text',name='msg',disabled=!nname)
           input#send(type='submit',value='Send',disabled=!nname)
+      .card.d
+        div
+          p &hearts;&nbsp;&nbsp;&nbsp;&hearts;
+          p &hearts;&nbsp;&hearts;&nbsp;&hearts;
+          p &hearts;&nbsp;&hearts;&nbsp;&hearts;
+          p &hearts;&nbsp;&nbsp;&nbsp;&hearts;
     footer
